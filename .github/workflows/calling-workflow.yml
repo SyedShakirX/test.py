@@ -1,0 +1,12 @@
+name: This is Calling Workflow
+on: workflow_dispatch
+
+jobs:
+  calling-job:
+    #we dont need runs-on because this is just a trigger
+    uses: SyedShakirX/test.py/.github/workflows/called-workflow.yml@main
+    with:
+      num1: 111
+      num2: 222
+      
+      
